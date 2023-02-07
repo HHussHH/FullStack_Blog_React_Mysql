@@ -8,6 +8,7 @@ import Write from "./pages/Write";
 import Single from "./pages/Single";
 
 import "./style.scss";
+import NotFound from "./pages/NotFound";
 const Layout = () => {
   return (
     <>
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/write",
         element: <Write />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
