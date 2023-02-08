@@ -32,7 +32,9 @@ const Navbar = () => {
           })}
           <span>{currentUser?.username}</span>
           {currentUser ? (
-            <span onClick={logout}>Logout</span>
+            <Link to="/login">
+              <span onClick={logout}>Logout</span>
+            </Link>
           ) : (
             <Link className="link" to="login">
               Login
