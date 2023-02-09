@@ -37,10 +37,11 @@ const Single = () => {
       console.log(err);
     }
   };
+
   return (
     <div className="single">
       <div className="content">
-        <img src={post?.img} alt="" />
+        <img src={`../upload/${post?.img}`} alt="" />
 
         <div className="user">
           {post.userImg && <img src={post.userImg} alt="" />}
@@ -51,7 +52,7 @@ const Single = () => {
           </div>
           {currentUser.username === post.username && (
             <div className="edit">
-              <Link to={`/write?edit=2`}>
+              <Link to={`/write?edit=2`} state={post}>
                 <img src={Edit} alt="" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="" />
